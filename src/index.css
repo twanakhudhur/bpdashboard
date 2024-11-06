@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spinners in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer base {
+  /* Default theme (paper) */
+  :root {
+    --bg-color: #eeeeee;
+    --main-color: #444444;
+    --caret-color: #444444;
+    --sub-color: #b2b2b2;
+    --sub-alt-color: #dddddd;
+    --text-color: #444444;
+    --error-color: #d70000;
+    --error-extra-color: #d70000;
+    --colorful-error-color: #d70000;
+    --colorful-error-extra-color: #d70000;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark theme */
+  [data-theme="dark"] {
+    --bg-color: #111;
+    --main-color: #eee;
+    --caret-color: #eee;
+    --sub-color: #444;
+    --sub-alt-color: #191919;
+    --text-color: #eee;
+    --error-color: #da3333;
+    --error-extra-color: #791717;
+    --colorful-error-color: #da3333;
+    --colorful-error-extra-color: #791717;
+  }
+
+  /* Shadow theme */
+  [data-theme="shadow"] {
+    --bg-color: #000;
+    --main-color: #eee;
+    --caret-color: #eee;
+    --sub-color: #444;
+    --sub-alt-color: #171717;
+    --text-color: #eee;
+    --error-color: #fff;
+    --error-extra-color: #d8d8d8;
+    --colorful-error-color: #fff;
+    --colorful-error-extra-color: #d8d8d8;
+  }
+
+  /* Blue Dolphin theme */
+  [data-theme="iceberg_light"] {
+    --bg-color: #e8e9ec;
+    --caret-color: #262a3f;
+    --main-color: #2d539e;
+    --sub-color: #adb1c4;
+    --sub-alt-color: #ccceda;
+    --text-color: #33374c;
+    --error-color: #cc517a;
+    --error-extra-color: #cc3768;
+    --colorful-error-color: #cc517a;
+    --colorful-error-extra-color: #cc3768;
+  }
+
+  /* Aurora theme */
+  [data-theme="aurora"] {
+    --bg-color: #011926;
+    --main-color: #00e980;
+    --caret-color: #00e980;
+    --sub-color: #245c69;
+    --sub-alt-color: #000c13;
+    --text-color: #fff;
+    --error-color: #b94da1;
+    --error-extra-color: #9b3a76;
+    --colorful-error-color: #b94da1;
+    --colorful-error-extra-color: #9b3a76;
+  }
+
+  /* Striker theme */
+  [data-theme="striker"] {
+    --bg-color: #124883;
+    --main-color: #d7dcda;
+    --caret-color: #d7dcda;
+    --sub-color: #0f2d4e;
+    --sub-alt-color: #25507e;
+    --text-color: #d6dbd9;
+    --error-color: #fb4934;
+    --error-extra-color: #cc241d;
+    --colorful-error-color: #fb4934;
+    --colorful-error-extra-color: #cc241d;
+  }
+
+  /* Miami theme */
+  [data-theme="miami"] {
+    --bg-color: #18181a;
+    --main-color: #e4609b;
+    --caret-color: #e4609b;
+    --sub-color: #47bac0;
+    --sub-alt-color: #0f0f10;
+    --text-color: #fff;
+    --error-color: #fff591;
+    --error-extra-color: #b6af68;
+    --colorful-error-color: #fff591;
+    --colorful-error-extra-color: #b6af68;
+  }
+
+  /* Note theme */
+  [data-theme="note"] {
+    --bg-color: #1f1f1f;
+    --main-color: #f2c17b;
+    --caret-color: #e3dce0;
+    --sub-color: #768f95;
+    --sub-alt-color: #141414;
+    --text-color: #d2dff4;
+    --error-color: #ff0000;
+    --error-extra-color: #588498;
+    --colorful-error-color: var(--error-color);
+    --colorful-error-extra-color: var(--error-extra-color);
+    /* custom vars */
+    --theme-bg-stripe-color: #434653;
+    --theme-bg-stripe-opacity: 0.1;
+    --theme-accent-stripe-color: #bf8200;
+    --current-color: var(--text-color);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px var(--sub-alt-color) inset !important;
+    -webkit-text-fill-color: var(--text-color) !important;
+    -webkit-border: var(--sub-alt-color) !important;
+  }
+
+  /* body::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* Reveal scrollbar on hover or focus */
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--sub-color); /* Darker thumb */
+    border-radius: 10px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 5px; /* Visible width when hovered */
+    height: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: var(--bg-color); /* Track color */
+  }
+
+  /* Trigger scrollbar appearance on scroll container hover */
+  *:hover::-webkit-scrollbar,
+  *:focus-within::-webkit-scrollbar {
+    width: 5px;
+  }
+}

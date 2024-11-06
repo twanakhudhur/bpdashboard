@@ -1,0 +1,13 @@
+{
+    "general": {
+        "home": "Home",
+        "dashboard": "Dashboard",
+        "rolls": "Rolls",
+        "slits": "Slits",
+        "pieces": "Pieces",
+        "wastes": "Wastes",
+        "tamburs": "Tamburs",
+        "settings": "Settings",
+        "logout": "Logout"
+    }
+}
